@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">
+            com.mysql.jdbc.Driver
+        </property>
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost:3306/javaee?characterEncoding=UTF8&amp;serverTimezone=GMT%2B8&amp;useSSL=false
+        </property>
+        <property name="hibernate.connection.username">
+            root
+        </property>
+        <property name="hibernate.connection.password">
+            123456
+        </property>
+        <property name="Hibernate.current_session_context_class">thread</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.show_sql">true</property><!--显示的sql语句格式化-->
+        <property name="format_sql">true</property><!--使显示的sql语句-->
+
+        <mapping class="entity.Cart"/>
+        <mapping class="entity.CartGoods"/>
+        <mapping class="entity.CreditCard"/>
+        <mapping class="entity.Goods"/>
+        <mapping class="entity.User"/>
+     </session-factory>
+</hibernate-configuration>
